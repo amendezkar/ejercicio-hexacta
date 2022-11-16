@@ -1,6 +1,5 @@
-# java-base-project
+# Ejercicio:
 
-Ejercicio :
 2.           Crear una aplicación integradora usando:
 a.           Frontend: Angular + HTML
 b.           Backend: Java (spring boot)
