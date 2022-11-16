@@ -1,7 +1,7 @@
 # Ejercicio:
 
 2.           Crear una aplicación integradora usando:
-a.           Frontend: Angular + HTML
+a.           Frontend: React + HTML
 b.           Backend: Java (spring boot)
 c.            Base de datos: a elección
 
