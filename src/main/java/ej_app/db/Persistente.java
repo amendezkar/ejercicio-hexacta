@@ -1,4 +1,4 @@
-package ej_hex.db;
+package ej_app.db;
 
 import lombok.Getter;
 
