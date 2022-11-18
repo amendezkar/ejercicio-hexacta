@@ -29,7 +29,12 @@ public class AppEjercicio {
         config.exposeIdsFor(Persona.class);
 
         return(cosas) -> {
-            repoPersona.save(new Persona("Ricardo", "Perez", LocalDate.of(2000, 01, 01)));
+            repoPersona.save(new Persona("Ricardo", "Perez", LocalDate.of(2012, 05, 18)));
+            repoPersona.save(new Persona("Agustin", "Mendez", LocalDate.of(2011, 11, 15)));
+            repoPersona.save(new Persona("Tomas", "Gomez", LocalDate.of(2005, 05, 19)));
+            repoPersona.save(new Persona("Lucia", "Rodriguez", LocalDate.of(2004, 11, 05)));
+            repoPersona.save(new Persona("Fabiana", "Garcia", LocalDate.of(1942, 12, 28)));
+            repoPersona.save(new Persona("Carolina", "Saraza", LocalDate.of(1942, 11, 9)));
         };
     }
 }
