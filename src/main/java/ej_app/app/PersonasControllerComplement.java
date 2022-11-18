@@ -19,7 +19,7 @@ public class PersonasControllerComplement {
 
     @GetMapping(value = "/personas", params = "nombre")
     @ResponseBody
-    public Page<Persona> traerPorNombre(@RequestParam(value = "nombre", required = false) String nombre,
+    public Page<DTOPersona> traerPorNombre(@RequestParam(value = "nombre", required = false) String nombre,
                                         Pageable pageable) {
 
             return repoPersona.findPersonaByNombre(nombre, pageable);
@@ -27,7 +27,7 @@ public class PersonasControllerComplement {
 
     @GetMapping(value = "/personas", params = "apellido")
     @ResponseBody
-    public Page<Persona> traerPorApellido(@RequestParam(value = "apellido", required = false) String apellido,
+    public Page<DTOPersona> traerPorApellido(@RequestParam(value = "apellido", required = false) String apellido,
                                           Pageable pageable) {
 
         return repoPersona.findPersonaByApellido(apellido, pageable);
@@ -35,7 +35,7 @@ public class PersonasControllerComplement {
 
     @GetMapping(value = "/personas", params = {"nombre","apellido"})
     @ResponseBody
-    public Page<Persona> traerPorNombreYApellido(@RequestParam(value = "nombre", required = false) String nombre,
+    public Page<DTOPersona> traerPorNombreYApellido(@RequestParam(value = "nombre", required = false) String nombre,
                                                  @RequestParam(value = "apellido", required = false) String apellido,
                                                  Pageable pageable) {
 

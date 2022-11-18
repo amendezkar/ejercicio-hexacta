@@ -12,9 +12,9 @@ import java.util.List;
 @RepositoryRestResource(path = "personas", excerptProjection = DTOPersona.class)
 public interface RepoPersonaJPA extends JpaRepository<Persona, Integer> {
 
-    Page<Persona> findPersonaByNombre(String nombre, Pageable page);
+    Page<DTOPersona> findPersonaByNombre(String nombre, Pageable page);
 
-    Page<Persona> findPersonaByApellido(String apellido, Pageable page);
+    Page<DTOPersona> findPersonaByApellido(String apellido, Pageable page);
 
-    Page<Persona> findPersonaByNombreAndApellido(String nombre, String apellido, Pageable page);
+    Page<DTOPersona> findPersonaByNombreAndApellido(String nombre, String apellido, Pageable page);
 }
