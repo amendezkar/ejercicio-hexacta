@@ -35,6 +35,9 @@ public class AppEjercicio {
             repoPersona.save(new Persona("Lucia", "Rodriguez", LocalDate.of(2004, 11, 05)));
             repoPersona.save(new Persona("Fabiana", "Garcia", LocalDate.of(1942, 12, 28)));
             repoPersona.save(new Persona("Carolina", "Saraza", LocalDate.of(1942, 11, 9)));
+
+            repoPersona.save(new Persona("Ricardo", "Gomez", LocalDate.of(2012, 05, 18)));
+            repoPersona.save(new Persona("Lucia", "Perez", LocalDate.of(2012, 05, 18)));
         };
     }
 }
