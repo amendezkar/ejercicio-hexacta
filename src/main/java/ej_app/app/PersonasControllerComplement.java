@@ -17,17 +17,28 @@ public class PersonasControllerComplement {
     @Autowired
     RepoPersonaJPA repoPersona;
 
-    @GetMapping("/personas")
+    @GetMapping(value = "/personas", params = "nombre")
     @ResponseBody
-    public Page<Persona> traerPorNombre(@RequestParam String nombre, Pageable pageable) {
+    public Page<Persona> traerPorNombre(@RequestParam(value = "nombre", required = false) String nombre,
+                                        Pageable pageable) {
 
-        return repoPersona.findPersonaByNombre(nombre, pageable);
+            return repoPersona.findPersonaByNombre(nombre, pageable);
     }
 
-    /*@GetMapping("/personas")
+    @GetMapping(value = "/personas", params = "apellido")
     @ResponseBody
-    public Page<Persona> traerPorApellido(@RequestParam String apellido, Pageable pageable) {
+    public Page<Persona> traerPorApellido(@RequestParam(value = "apellido", required = false) String apellido,
+                                          Pageable pageable) {
 
         return repoPersona.findPersonaByApellido(apellido, pageable);
-    }*/
+    }
+
+    @GetMapping(value = "/personas", params = {"nombre","apellido"})
+    @ResponseBody
+    public Page<Persona> traerPorNombreYApellido(@RequestParam(value = "nombre", required = false) String nombre,
+                                                 @RequestParam(value = "apellido", required = false) String apellido,
+                                                 Pageable pageable) {
+
+        return repoPersona.findPersonaByNombreAndApellido(nombre, apellido, pageable);
+    }
 }

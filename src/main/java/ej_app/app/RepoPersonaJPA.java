@@ -15,4 +15,6 @@ public interface RepoPersonaJPA extends JpaRepository<Persona, Integer> {
     Page<Persona> findPersonaByNombre(String nombre, Pageable page);
 
     Page<Persona> findPersonaByApellido(String apellido, Pageable page);
+
+    Page<Persona> findPersonaByNombreAndApellido(String nombre, String apellido, Pageable page);
 }
